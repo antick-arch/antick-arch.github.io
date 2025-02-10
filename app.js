@@ -29,7 +29,7 @@ app.use('/user', userRoutes);
 app.use('/admin', adminRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Catch-all route to handle 404 errors
