@@ -8,6 +8,8 @@ const homeRoutes = require('./routes/home.routes');
 const adminRoutes = require('./routes/admin.routes');
 require('dotenv').config();
 
+const port = process.env.PORT || 3000;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -26,10 +28,18 @@ app.use('/', homeRoutes);
 app.use('/user', userRoutes);
 app.use('/admin', adminRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 dbConnection.then(() => {
-    app.listen(3000, () => {
-        console.log('Server is running on port 3000');
-    });
+    try {
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
+        });
+    } catch (err) {
+        console.error('Failed to start server due to database connection error:', err);
+    }
 }).catch((err) => {
     console.error('Failed to start server due to database connection error:', err);
 });
