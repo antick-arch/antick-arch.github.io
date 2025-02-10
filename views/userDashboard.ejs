@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+      }
+      .dashboard-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+      }
+      .dashboard-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .dashboard-header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      .dashboard-content {
+        text-align: center;
+      }
+      .dashboard-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .btn-primary {
+        background-color: #ff7e5f;
+        border-color: #ff7e5f;
+      }
+      .btn-primary:hover {
+        background-color: #feb47b;
+        border-color: #feb47b;
+      }
+      .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+      .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h1>User Dashboard</h1>
+            </div>
+            <div class="dashboard-content">
+                <p>Welcome, <%= user.name %>!</p>
+                <p>Email: <%= user.email %></p>
+                <!-- Add more user details as needed -->
+                <a href="/user/profile" class="btn btn-primary">View Profile</a>
+                <a href="/user/logout" class="btn btn-secondary">Logout</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

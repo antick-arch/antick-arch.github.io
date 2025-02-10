@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+    color: #fff;
+}
+.form-text {
+    color: #ddd;
+}
+.table {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.table th, .table td {
+    color: #fff;
+}

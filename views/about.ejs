@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Neutron Knights</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="stylesheets/about.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #71acfa, #1024d6);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: #343a4063;
+            padding: 1rem 2rem;
+            transition: background 0.3s ease;
+        }
+        .navbar-brand img {
+            width: 100px;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #feb47b;
+        }
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+        .team .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .team .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .team .card-body {
+            padding: 20px;
+        }
+        .team .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .team .card-text {
+            font-size: 1rem;
+            color: #666;
+        }
+        .social-icons a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #feb47b;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        footer .footer-logo img {
+            width: 100px;
+        }
+        footer .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer .footer-links a:hover {
+            color: #feb47b;
+        }
+        footer .footer-social a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="about/logo.png" alt="Neutron Knights Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container mt-5">
+        <section class="text-center mb-5">
+            <h1 style="color: white;">About Neutron Knights</h1>
+            <p style="color: white;">Welcome to Neutron Knights, where we explore the frontiers of technology and innovation. Our mission is to navigate the unknown and bring you the latest advancements in quantum computing, renewable energy, and smart urban solutions.</p>
+        </section>
+        <section class="team">
+            <h2 class="text-center mb-4">Leadership Team</h2>
+            <hr >
+            <div class="row">
+                <% cards.forEach(card => { %>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="/uploads/<%= card.image %>" class="card-img-top" alt="<%= card.title %>">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><%= card.title %></h5>
+                                <p class="card-text"><%= card.text %></p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="footer-logo mb-3">
+                <img src="about/logo.png" alt="Neutron Knights Logo">
+            </div>
+            <div class="footer-links mb-3">
+                <a href="/" class="text-white mx-2">Home</a>
+                <a href="/about" class="text-white mx-2">About</a>
+                <a href="/contact" class="text-white mx-2">Contact</a>
+            </div>
+            <div class="footer-social mb-3">
+                <a href="#" class="text-white mx-2"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="text-white mx-2"><i class="ri-twitter-fill"></i></a>
+                <a href="#" class="text-white mx-2"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="text-white mx-2"><i class="ri-linkedin-fill"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; This website is designed and developed by <em>Antick Chandra Kuri</em></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', () => {
+            const navLinks = document.querySelector('.navbar-collapse');
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

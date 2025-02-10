@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #455278;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #dd7171;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+}
+
+.team {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #0f2834;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+footer {
+    background-color: #0f2834;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #455278;
+    color: #fff;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #dd7171;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.footer-social a:hover {
+    color: #dd7171;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-bottom em {
+    font-style: normal;
+    color: #ff6b6b;
+}

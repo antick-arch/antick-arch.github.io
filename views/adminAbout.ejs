@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage About Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Manage About Page</h1>
+        <form action="/admin/about" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Card Image:</label>
+                <input type="file" class="form-control" id="image" name="image" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Card Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="text">Card Text:</label>
+                <textarea class="form-control" id="text" name="text" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Card</button>
+        </form>
+        <hr>
+        <h2 class="mb-4">Existing Cards</h2>
+        <div class="row">
+            <% cards.forEach(card => { %>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="/uploads/<%= card.image %>" class="card-img-top" alt="<%= card.title %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= card.title %></h5>
+                            <p class="card-text"><%= card.text %></p>
+                            <a href="/admin/about/delete/<%= card._id %>" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
