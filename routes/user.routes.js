@@ -21,8 +21,14 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+// Define the register route
 router.get('/register', (req, res) => {
-    res.render('registration');
+  res.sendFile(path.join(__dirname, '../public', 'register.html'));
+});
+
+// Define the login route
+router.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public', 'login.html'));
 });
 
 router.post('/register', async (req, res) => {
@@ -42,10 +48,6 @@ router.post('/register', async (req, res) => {
         console.error(err.stack);
         res.status(500).send('Internal Server Error');
     }
-});
-
-router.get('/login', (req, res) => {
-    res.render('login');
 });
 
 router.post('/login', async (req, res) => {
